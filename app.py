@@ -197,8 +197,23 @@ st.sidebar.write("### Selected Symptoms:")
 for s in st.session_state.selected_symptoms:
     st.sidebar.write(f"✅ {s}")
 
-if st.sidebar.button("Clear Symptoms"):
+if st.sidebar.button("Clear Symptoms", key="clear_btn"):
     st.session_state.selected_symptoms = []
+
+# Custom CSS to only change text color of "Clear Symptoms" button
+st.sidebar.markdown(
+    """
+    <style>
+        /* Target the "Clear Symptoms" button specifically */
+        div[data-testid="stButton"] button:nth-of-type(1) {
+            color: red !important;  /* Change text color to red */
+            font-weight: bold !important;  /* Make text bold */
+        }
+    </style>
+    """,
+    unsafe_allow_html=True,
+)
+
 
 #predict Button
 if st.button("Predict Disease"):
