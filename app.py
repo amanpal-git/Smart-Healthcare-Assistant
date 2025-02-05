@@ -66,9 +66,10 @@ symptom = st.sidebar.selectbox("Choose a Symptom: ", ["Select a symptom"] + all_
 if symptom != "Select a symptom" and symptom not in st.session_state.selected_symptoms:
     st.session_state.selected_symptoms.append(symptom)
 
-st.sidebar.write("### Selected Symptoms:")
+st.sidebar.write("## Selected Symptoms:")
 for s in st.session_state.selected_symptoms:
-    st.sidebar.write(f"✅ {s}")
+    # st.sidebar.write(f"✅ {s}")
+    st.sidebar.markdown(f"<span style='color: blue;'>✅ {s}</span>", unsafe_allow_html=True)  # Change text color to blue
 
 if st.sidebar.button("Clear Symptoms", key="clear_btn"):
     st.session_state.selected_symptoms = []
