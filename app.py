@@ -141,7 +141,7 @@ if st.button("Predict Disease"):
 # 📚 Button to Open Notebook in Sidebar
 st.sidebar.markdown(
     """
-    <a href="https://colab.research.google.com/drive/your_notebook_link_here" class="button-link" target="_blank" style="color: white !important;">
+    <a href="https://colab.research.google.com/drive/1bMBiMGMK2Tjfdz49ry1ePT1hwdzXQNat?usp=sharing" class="button-link" target="_blank" style="color: white !important;">
         Open Training Notebook
     </a>
     """,
